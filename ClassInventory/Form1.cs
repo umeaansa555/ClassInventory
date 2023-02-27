@@ -13,7 +13,7 @@ namespace ClassInventory
     public partial class Form1 : Form
     {
         // Global Variabales go here
-
+        List<Player> players = new List<Player>();
 
         public Form1()
         {
@@ -22,6 +22,23 @@ namespace ClassInventory
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            string name, team, position;
+            int age;
+
+            name = nameInput.Text;
+            team = teamInput.Text;
+            position = positionInput.Text;
+            age = Convert.ToInt32(ageInput.Text);
+
+            Player addedPlayer = new Player(name, team, position, age);
+            players.Add(addedPlayer);
+
+            outputLabel.Text = "";
+
+            foreach (Player player in players)
+            {
+                outputLabel.Text += $"  {player.name}  {player.team}  {player.position}  {player.age}\n";
+            }
 
         }
 
