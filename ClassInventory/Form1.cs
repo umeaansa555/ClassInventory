@@ -44,7 +44,14 @@ namespace ClassInventory
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-
+            foreach (Player player in players)
+            {
+                if(player.name == removeInput.Text)
+                {
+                    players.Remove(player);
+                }
+                
+            }
         }
 
         private void searchButton_Click(object sender, EventArgs e)
