@@ -50,7 +50,7 @@ namespace ClassInventory
                 {
                     players.Remove(player);
                 }
-                
+                else { }
             }
         }
 
