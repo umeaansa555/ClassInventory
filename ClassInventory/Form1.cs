@@ -48,13 +48,8 @@ namespace ClassInventory
             {
                 if(player.name == removeInput.Text)
                 {
-                    players.Remove(player);
-
-                    /*foreach (Player player in players)
-                    {
-                        outputLabel.Text += $"  {player.name}  {player.team}  {player.position}  {player.age}\n";
-                    }*/
-                    outputLabel.Text = "Hit add button to refresh list"; 
+                    outputLabel.Text += $"Player name {player.name} was removed"; 
+                    players.Remove(player);                    
                     Refresh();
                     break;
                 }
